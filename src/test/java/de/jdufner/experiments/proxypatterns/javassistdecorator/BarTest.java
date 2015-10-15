@@ -1,4 +1,4 @@
-package de.jdufner.experiments.javassistdecorator;
+package de.jdufner.experiments.proxypatterns.javassistdecorator;
 
 import org.junit.Assert;
 import org.junit.Test;

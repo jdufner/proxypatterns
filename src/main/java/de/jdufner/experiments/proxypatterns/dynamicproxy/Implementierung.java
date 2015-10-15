@@ -1,17 +1,17 @@
-package de.jdufner.experiments.javassistdecorator;
+package de.jdufner.experiments.proxypatterns.dynamicproxy;
 
-public class Foo {
+public class Implementierung implements Schnittstelle {
 
   private String name;
 
-  public Foo() {
-    super();
+  public Implementierung() {
   }
 
-  public Foo(final String name) {
+  public Implementierung(final String name) {
     this.name = name;
   }
 
+  @Override
   public String m1(final String s) {
     String result = name + ":m1:" + s;
     System.out.println(result);
@@ -21,5 +21,4 @@ public class Foo {
   protected String getName() {
     return name;
   }
-
 }

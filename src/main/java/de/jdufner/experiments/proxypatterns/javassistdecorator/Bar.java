@@ -1,4 +1,4 @@
-package de.jdufner.experiments.javassistdecorator;
+package de.jdufner.experiments.proxypatterns.javassistdecorator;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
