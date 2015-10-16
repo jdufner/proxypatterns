@@ -10,6 +10,7 @@ public class ImplementierungTest {
     Implementierung implementierung = new Implementierung("abc");
     Assert.assertEquals("foo1(abc)", implementierung.foo1());
     Assert.assertEquals("foo2(abc)", implementierung.foo2());
+    // Methode bar() existiert in der Implementierung nicht
   }
 
 }

@@ -1,5 +1,11 @@
 package de.jdufner.experiments.proxypatterns.dynamicproxy;
 
+/**
+ * Eine einfache Implementierung der Schnittstelle. Die Implementierung ist
+ * final deklariert, damit keine Subklassen erzeugt werden können.
+ *
+ * @author Jürgen
+ */
 public final class Implementierung implements Schnittstelle {
 
   private String name;
