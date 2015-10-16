@@ -1,6 +1,6 @@
 package de.jdufner.experiments.proxypatterns.dynamicproxy;
 
-public class Implementierung implements Schnittstelle {
+public final class Implementierung implements Schnittstelle {
 
   private String name;
 
@@ -12,13 +12,17 @@ public class Implementierung implements Schnittstelle {
   }
 
   @Override
-  public String m1(final String s) {
-    String result = name + ":m1:" + s;
-    System.out.println(result);
-    return result;
+  public String foo1() {
+    return "foo1(" + name + ")";
+  }
+
+  @Override
+  public String foo2() {
+    return "foo2(" + name + ")";
   }
 
   protected String getName() {
     return name;
   }
+
 }

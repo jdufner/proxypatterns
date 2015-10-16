@@ -2,6 +2,8 @@ package de.jdufner.experiments.proxypatterns.dynamicproxy;
 
 public interface Schnittstelle {
 
-  String m1(String s);
+  String foo1();
+
+  String foo2();
 
 }

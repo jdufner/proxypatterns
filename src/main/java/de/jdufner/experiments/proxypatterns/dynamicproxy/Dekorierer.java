@@ -6,25 +6,23 @@ import java.lang.reflect.Proxy;
 
 public class Dekorierer implements InvocationHandler {
 
-  private Schnittstelle implementierung;
+  private Implementierung implementierung;
 
-  public Dekorierer(final Schnittstelle implementierung) {
+  public Dekorierer(final Implementierung implementierung) {
     this.implementierung = implementierung;
   }
 
-  public String m2() {
-    String result = ((Implementierung) implementierung).getName() + ":m2";
-    System.out.println(result);
-    return result;
+  public String bar() {
+    return ">>>bar(" + implementierung.getName() + ")<<<";
   }
 
   @Override
   public Object invoke(final Object proxy, final Method method, final Object[] args) throws Throwable {
-    return method.invoke(implementierung, args);
+    return ">>>" + (String) method.invoke(implementierung, args) + "<<<";
   }
 
-  public static Schnittstelle buildProxy(final Schnittstelle schnittstelle) {
-    return (Schnittstelle) Proxy.newProxyInstance(schnittstelle.getClass().getClassLoader(), new Class<?>[] { Schnittstelle.class },
-        new Dekorierer(schnittstelle));
+  public static Schnittstelle buildProxy(final Implementierung implementierung) {
+    return (Schnittstelle) Proxy.newProxyInstance(implementierung.getClass().getClassLoader(),
+        new Class<?>[] { Schnittstelle.class }, new Dekorierer(implementierung));
   }
 }
