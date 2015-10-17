@@ -29,4 +29,11 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <organization>
+    <name>Jürgen Dufner</name>
+    <url>https://github.com/jdufner</url>
+  </organization>
+  <scm>
+    <url>https://github.com/jdufner/proxypatterns</url>
+  </scm>
 </project>
